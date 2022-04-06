@@ -6,7 +6,7 @@ let reyeX,reyeY;
 let leyeX,leyeY;
 let singlePose,skeleton;
 let actor_img;
-let specs,smoke;
+let pepe,monalisa;
 
 function setup() {  // this function runs only once while running
     createCanvas(800, 500);
@@ -19,8 +19,9 @@ function setup() {  // this function runs only once while running
     //detect pose
     posenet.on('pose', recievedPoses);
 
-    specs = loadImage('image/pepe.jpg');
-    smoke = loadImage('image/monalisagraff.png');
+
+    pepe = loadImage('image/pepe.jpg');
+    monalisa = loadImage('image/monalisagraff.png');
 }
 
 function recievedPoses(poses) {
@@ -59,9 +60,42 @@ function draw() { // this function code runs in infinite loop
             line(skeleton[j][0].position.x, skeleton[j][0].position.y, skeleton[j][1].position.x, skeleton[j][1].position.y);
         }
 
-        // Apply specs and cigar
-        image(specs, singlePose.nose.x-40, singlePose.nose.y-70, 125, 125);
-        image(smoke, singlePose.nose.x-35, singlePose.nose.y+28, 50, 50);
+        // Apply pepe and cigar
+        image(pepe, singlePose.nose.x, singlePose.nose.y, 125, 125);
+        image(monalisa, singlePose.nose.x, singlePose.nose.y, 50, 50);
     }
+    
+    //background(200);
+    //1.point
+    //point(200, 200);
+    //2.line
+    //line(200, 200, 300, 300);
+    //3.trialgle
+    //triangle(100, 200, 300, 400, 150, 250);
+    //4.rectangle
+    //rect(250, 200, 200, 100);
+    //5. circle
+    //ellipse(100, 200, 100, 100);
+    // color circlw using stroke and crcle
+    /*
+    fill(127, 102, 34);
+    stroke(255, 0, 0);
+    ellipse(100, 200, 100, 100);
+    stroke(0, 255, 0);
+    ellipse(300, 320, 100, 100);
+    stroke(0, 0, 255);
+    ellipse(400, 400, 100, 100);
+    */
 
+    // infite loop using mouse hovering
+    //fill(255);
+    /*
+    r = getRandomArbitrary(0, 255);
+    g = getRandomArbitrary(0, 255);
+    b = getRandomArbitrary(0, 255);
+    fill(r,g,b);
+    ellipse(mouseX, mouseY, 50, 50);
+    */
+   // IMAGE CAPTURE
+   //image(capture, 0, 0, 800, 600);
 }
