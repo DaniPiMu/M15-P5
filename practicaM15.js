@@ -6,7 +6,7 @@ let reyeX,reyeY;
 let leyeX,leyeY;
 let singlePose,skeleton;
 let actor_img;
-let pepe,monalisa;
+let pepe,loro,garfio;
 
 function setup() {  // this function runs only once while running
     createCanvas(800, 500);
@@ -21,7 +21,9 @@ function setup() {  // this function runs only once while running
 
 
     pepe = loadImage('image/pepe.jpg');
-    monalisa = loadImage('image/loro.png');
+    loro = loadImage('image/loro.png');
+    garfio = loadImage('image/garfio.png');
+
 }
 
 function recievedPoses(poses) {
@@ -62,9 +64,11 @@ function draw() { // this function code runs in infinite loop
 
         // Apply pepe and cigar
         image(pepe, singlePose.nose.x-65, singlePose.nose.y-50, 150, 150);
-        image(monalisa, singlePose.leftShoulder.x-20, singlePose.leftShoulder.y-50, 50, 50);
-        image(monalisa, singlePose.rightShoulder.x-20, singlePose.rightShoulder.y-50, 50, 50);
-        image(monalisa, singlePose.rightWrist.x-20, singlePose.rightWrist.y-50, 50, 50)
+        image(loro, singlePose.leftShoulder.x-20, singlePose.leftShoulder.y-50, 50, 50);
+        image(loro, singlePose.rightShoulder.x-20, singlePose.rightShoulder.y-50, 50, 50);
+        image(garfio, singlePose.rightWrist.x-20, singlePose.rightWrist.y-50, 50, 50)
+        image(garfio, singlePose.leftWrist.x-20, singlePose.leftWrist.y-50, 50, 50)
+
     }
     
 }
