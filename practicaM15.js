@@ -61,7 +61,7 @@ function draw() { // this function code runs in infinite loop
         }
 
         // Apply pepe and cigar
-        image(pepe, singlePose.nose.x, singlePose.nose.y, 125, 125);
+        image(pepe, singlePose.nose.x50, singlePose.nose.y50, 125, 125);
         image(monalisa, singlePose.nose.x, singlePose.nose.y, 50, 50);
     }
     
