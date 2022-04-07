@@ -21,7 +21,7 @@ function setup() {  // this function runs only once while running
 
 
     pepe = loadImage('image/pepe.jpg');
-    monalisa = loadImage('image/monalisagraff.png');
+    monalisa = loadImage('image/loro.png');
 }
 
 function recievedPoses(poses) {
