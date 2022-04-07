@@ -51,6 +51,21 @@ function draw() { // this function code runs in infinite loop
     fill(255, 0, 0);
     
     if(singlePose) {
+        let eyeR = singlePose.rightEye;
+        let eyeL = singlePose.leftEye;
+        let d = dist(eyeR.x, eyeR.y, eyeL.x, eyeL.y);
+    
+        fill(255,0,0)
+        ellipse(eyeL.x,eyeL.y,50,d/2)
+        ellipse(eyeR.x,eyeR.y,50,d/2)
+        
+        fill(0)
+        ellipse(eyeL.x+10,eyeL.y,10)
+        ellipse(eyeR.x-10,eyeR.y,10)
+    
+    
+
+        /** 
         for(let i=0; i<singlePose.keypoints.length; i++) {
             ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 20);
         }
@@ -70,5 +85,6 @@ function draw() { // this function code runs in infinite loop
         image(garfio, singlePose.leftWrist.x-20, singlePose.leftWrist.y-50, 50, 50)
 
     }
+    */
     
 }
